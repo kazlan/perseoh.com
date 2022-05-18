@@ -6,11 +6,12 @@ var resolved_ip=dnsResolve(host);
 var proxyMarktel="PROXY 172.21.0.104:3128";
 var proxyMarktele="PROXY 172.16.73.121:3128";
 var proxyMasmovil="PROXY 172.30.47.8:8080";
+// Añado sección para google apis - jorge 18/05/22
 if (
     dnsDomainIs(host,"googleapis.com")||
     dnsDomainIs(host,"discord.com")
     )
-    return proxyMarktel;
+return proxyMarktel;
 if (
 dnsDomainIs(host,"clientes.yoigo.inet")||
 dnsDomainIs(host,"mosaic2.yoigo.inet")||
@@ -22,8 +23,9 @@ dnsDomainIs(host,".netkia.es")||
 dnsDomainIs(host,"jira.masmovil.com")||
 dnsDomainIs(host,"opit.masmovil.com")||
 dnsDomainIs(host,".lycamobile.es")||
-dnsDomainIs(host,"sct-mmlyle-sit-mm.qvantel.systems")||
-dnsDomainIs(host,"auth-mmlyle-sit.qvantel.systems")||
+// cambio sit por prod - jorge 18/05/22
+dnsDomainIs(host,"sct-mmlyle-prod-mm.qvantel.solutions")||
+dnsDomainIs(host,"auth-mmlyle-prod.qvantel.solutions")||
 dnsDomainIs(host,".iber.lan")||
 dnsDomainIs(host,"ibervoz.com")||
 dnsDomainIs(host,"solaire.masmovil.com")||
